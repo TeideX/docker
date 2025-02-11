@@ -12,7 +12,8 @@ services:
       - MAXPLAYERS=2
       - PGID=1000
       - PUID=1000
-      - STEAMBETA=false
+      - STEAMBETA=experimental
+    
     restart: unless-stopped
     deploy:
       resources:
