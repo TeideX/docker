@@ -7,9 +7,9 @@ services:
       - '7777:7777/udp'
       - '7777:7777/tcp'
     volumes:
-      - './satisfactory-server:/config'
+      - '/home/debian/satisfactory-server:/config'
     environment:
-      - MAXPLAYERS=4
+      - MAXPLAYERS=2
       - PGID=1000
       - PUID=1000
       - STEAMBETA=false
@@ -17,6 +17,6 @@ services:
     deploy:
       resources:
         limits:
-          memory: 8G
+          memory: 4G
         reservations:
           memory: 4G
